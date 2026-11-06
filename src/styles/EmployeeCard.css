@@ -1,0 +1,16 @@
+.employee-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box;
+}
+
+.employee-card h3 {
+    font-size: 1.1rem;
+    color: white;
+}

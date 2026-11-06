@@ -1,0 +1,198 @@
+/* Layout global de la ventana */
+.layout {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #E7EDF2;
+    color: #263746;
+}
+
+/* 1. Cabecera superior */
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    padding: 0 1.5rem;
+    border: 2px solid #344F64;
+    box-sizing: border-box;
+    background-color: #263B50;
+    color: #F9FBFC;
+}
+
+.cabecera-izquierda,
+.cabecera-derecha {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icono-box {
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 2px solid #BDCBD5;
+    background-color: #34566F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.icono-circulo {
+    font-size: 1.4rem;
+}
+
+.barra-decorativa {
+    width: 7rem;
+    height: 0.6rem;
+    border: 2px solid #BDCBD5;
+    border-radius: 4px;
+    background-color: #34566F;
+}
+
+.lineas-decorativas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.linea-corta {
+    width: 3.5rem;
+    height: 3px;
+    background-color: #DCE6ED;
+}
+
+.linea-larga {
+    width: 5rem;
+    height: 3px;
+    background-color: #DCE6ED;
+}
+
+/* 2. Cuerpo general */
+.cuerpo {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    box-sizing: border-box;
+    background-color: #E7EDF2;
+}
+
+/* Sidebar lateral izquierda */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 12rem;
+    height: 100%;
+    padding: 1rem;
+    border-right: 2px solid #BDCBD5;
+    box-sizing: border-box;
+    background-color: #3F6177;
+    color: #F9FBFC;
+}
+
+/* Botones de la sidebar */
+.sidebar button {
+    background-color: #29465D;
+    color: #F9FBFC;
+    border: 1px solid #7892A5;
+    border-radius: 6px;
+}
+
+.sidebar button:hover {
+    background-color: #547991;
+}
+
+/* Panel principal derecho */
+.panel-principal {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #E7EDF2;
+    color: #263746;
+}
+
+/* Buscador */
+.busqueda {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 2.5rem;
+    border: 2px solid #BDCBD5;
+    border-radius: 6px;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+    background-color: #F9FBFC;
+}
+
+.input-busqueda {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #263746;
+    font-size: 0.95rem;
+}
+
+.input-busqueda::placeholder {
+    color: #758A9A;
+}
+
+/* Área de contenido general */
+.contenido {
+    flex: 1;
+    overflow: hidden;
+    background-color: #E7EDF2;
+}
+
+/* Rejilla de tarjetas de 3 columnas */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    padding: 0.5rem;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background-color: #E7EDF2;
+}
+
+/* Tarjetas */
+.grid-tarjetas>* {
+    background-color: #F9FBFC;
+    color: #263746;
+    border: 2px solid #BDCBD5;
+    border-radius: 10px;
+}
+
+/* Títulos de las tarjetas */
+.grid-tarjetas>* h1,
+.grid-tarjetas>* h2,
+.grid-tarjetas>* h3,
+.grid-tarjetas>* h4,
+.grid-tarjetas>* h5,
+.grid-tarjetas>* h6 {
+    color: #263746 !important;
+}
+
+/* Mensaje de carga */
+.cargando {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #E7EDF2;
+    color: #263746;
+    font-size: 1.1rem;
+}
