@@ -1,18 +1,18 @@
 .item-sidebar {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Centra el texto dentro del item */
     height: 2.5rem;
-    border: 2px solid white;
-    border-radius: 4px;
-    box-sizing: border-box;
-
+    border: 1px solid #7892a5;
+    border-radius: 6px;
+    background-color: #29465d;
+    color: #f9fbfc;
+    font-size: 0.95rem;
 }
 
+.item-sidebar:hover {
+    background-color: #547991;
+}
 
-.item-sidebar-texto {
-    font-size: 0.95rem;
-    font-weight: 500;
+.item-sidebar.activo {
+    background-color: #f9fbfc;
+    color: #263b50;
+    font-weight: bold;
 }

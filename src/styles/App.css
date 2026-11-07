@@ -1,0 +1,52 @@
+/* ---------- Layout general ---------- */
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.cuerpo {
+    display: flex;
+    flex: 1;
+}
+
+/* ---------- Barra lateral (contenedor de los botones) ---------- */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 12rem;
+    padding: 1rem;
+    background-color: #3f6177;
+}
+
+/* ---------- Panel central ---------- */
+#panel_central {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+/* ---------- Común a las tres vistas ---------- */
+.boton-cargar {
+    margin-bottom: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #29465d;
+    color: #f9fbfc;
+    font-size: 0.95rem;
+}
+
+.boton-cargar:hover {
+    background-color: #547991;
+}
+
+.mensaje {
+    font-size: 1.1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
