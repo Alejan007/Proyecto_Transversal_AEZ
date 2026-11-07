@@ -25,6 +25,10 @@ function Personal() {
         try {
             // await = espera a que el servidor responda, sin bloquear la app
             const respuesta = await fetch("https://jsonplaceholder.typicode.com/users");
+            // fetch no falla con un 404 o 500: hay que comprobar "ok" a mano
+            if (!respuesta.ok) {
+                throw new Error(`Error en el servidor: ${respuesta.status}`);
+            }
             const datos = await respuesta.json(); // convierte la respuesta a objetos
             setEmpleados(datos);                  // guarda los datos en el estado
         } catch (error) {
