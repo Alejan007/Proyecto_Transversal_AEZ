@@ -1,13 +1,11 @@
 import "../styles/EmployeeCard.css";
-// Props que recibe la tarjeta desde la vista Personal
 interface EmployeeCardProps {
     nombre: string;
     email: string;
     ciudad: string;
 }
 
-// TARJETA DE EMPLEADO: solo pinta los datos que le llegan por props.
-// No tiene estado ni lógica propia.
+// Nota: solo pinta los datos que le llegan por props.
 function EmployeeCard({ nombre, email, ciudad }: EmployeeCardProps) {
     return (
         <div className="tarjeta">
