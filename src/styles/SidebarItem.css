@@ -3,7 +3,7 @@
     border: 1px solid #7892a5;
     border-radius: 6px;
     background-color: #29465d;
-    color: #f9fbfc;
+    color: white;
     font-size: 0.95rem;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .item-sidebar.activo {
-    background-color: #f9fbfc;
+    background-color: white;
     color: #263b50;
     font-weight: bold;
 }

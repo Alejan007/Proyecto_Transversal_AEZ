@@ -12,11 +12,11 @@
 }
 
 .tarjeta-incidencia.resuelta {
-    background-color: #d9f2e1;
-    border-color: #4caf7a;
+    background-color: white;
+    border-color: green;
 }
 
 .tarjeta-incidencia.pendiente {
-    background-color: #fdeaea;
-    border-color: #e57373;
+    background-color: white;
+    border-color: red;
 }
