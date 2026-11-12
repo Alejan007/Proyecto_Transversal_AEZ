@@ -1,7 +1,6 @@
 .cabecera {
     display: flex;
     justify-content: space-between;
-    /* logo y nombre a la izquierda, hora a la derecha */
     align-items: center;
     height: 4rem;
     padding: 0 1.5rem;

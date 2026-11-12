@@ -12,12 +12,10 @@ function Inventario() {
     const [productos, setProductos] = useState<Product[]>([]);
     const [cargando, setCargando] = useState<boolean>(false);
 
-    // Se ejecuta al pulsar el botón "Cargar datos": petición GET 
     const cargarDatos = async () => {
         setCargando(true);
         try {
             const respuesta = await fetch("https://fakestoreapi.com/products?limit=6");
-            // fetch no falla con un 404 o 500: hay que comprobar "ok" a mano
             if (!respuesta.ok) {
                 throw new Error(`Error en el servidor: ${respuesta.status}`);
             }
@@ -39,7 +37,6 @@ function Inventario() {
                 <p className="mensaje">Cargando datos del servidor…</p>
             ) : (
                 <div className="grid">
-                    {/* Una tarjeta por producto, pasando los datos por props */}
                     {productos.map((p) => (
                         <ProductCard key={p.id} titulo={p.title} precio={p.price} imagen={p.image} />
                     ))}

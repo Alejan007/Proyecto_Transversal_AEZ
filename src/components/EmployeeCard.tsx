@@ -5,7 +5,6 @@ interface EmployeeCardProps {
     ciudad: string;
 }
 
-// Nota: solo pinta los datos que le llegan por props.
 function EmployeeCard({ nombre, email, ciudad }: EmployeeCardProps) {
     return (
         <div className="tarjeta-empleado">

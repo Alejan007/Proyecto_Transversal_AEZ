@@ -1,4 +1,3 @@
-/* ---------- Layout general ---------- */
 .app {
     display: flex;
     flex-direction: column;
@@ -10,7 +9,6 @@
     flex: 1;
 }
 
-/* ---------- Barra lateral (contenedor de los botones) ---------- */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -20,13 +18,11 @@
     background-color: #3f6177;
 }
 
-/* ---------- Panel central ---------- */
 #panel_central {
     flex: 1;
     padding: 1.5rem;
 }
 
-/* ---------- Común a las tres vistas ---------- */
 .boton-cargar {
     margin-bottom: 1.2rem;
     padding: 0.6rem 1.2rem;
