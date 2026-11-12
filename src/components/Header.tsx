@@ -13,7 +13,7 @@ function Header() {
                 <img src={logo} alt="Logo NovaCorp" className="logo" />
                 <h1>NovaCorp</h1>
             </div>
-            <span>{hora}</span>
+            <span className="hora">{hora}</span>
         </header>
     );
 }
