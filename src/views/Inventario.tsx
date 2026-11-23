@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
 
 interface Product {
@@ -12,25 +12,35 @@ function Inventario() {
     const [productos, setProductos] = useState<Product[]>([]);
     const [cargando, setCargando] = useState<boolean>(false);
 
-    const cargarDatos = async () => {
+    const cargarDatos = async (signal?: AbortSignal) => {
         setCargando(true);
         try {
-            const respuesta = await fetch("https://fakestoreapi.com/products?limit=6");
+            const respuesta = await fetch("https://fakestoreapi.com/products?limit=6", { signal });
             if (!respuesta.ok) {
                 throw new Error(`Error en el servidor: ${respuesta.status}`);
             }
             const datos = await respuesta.json();
             setProductos(datos);
-        } catch (error) {
-            console.error("Error al cargar el inventario:", error);
+        } catch (error: unknown) {
+            if (error instanceof Error && error.name !== "AbortError") {
+                console.error("Error al cargar el inventario:", error.message);
+            }
+        } finally {
+            setCargando(false);
         }
-        setCargando(false);
     };
+
+    useEffect(() => {
+        const controller = new AbortController();
+        cargarDatos(controller.signal);
+
+        return () => controller.abort();
+    }, []);
 
     return (
         <>
-            <button className="boton-cargar" onClick={cargarDatos}>
-                Cargar datos
+            <button className="boton-cargar" onClick={() => cargarDatos()}>
+                Recargar datos
             </button>
 
             {cargando ? (
